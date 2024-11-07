@@ -19,10 +19,10 @@ public class App10 {
         }
 
         Box box = new Box(10, 10 , 10, "White");
-        box.repaintBox();
-        box.openBox();
-        box.closeBox();
-        box.printInfoDox();
+        box.repaint();
+        box.open();
+        box.close();
+        box.printInfo();
 
     }
 }

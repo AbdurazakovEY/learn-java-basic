@@ -10,14 +10,14 @@ public class Box {
     private String item;
     private boolean isOpened;
 
-    public Box(int width, int height, int depth, String color) {
+    public Box (int width, int height, int depth, String color) {
         this.width = width;
         this.height = height;
         this.depth = depth;
         this.color = color;
     }
 
-    public Box (String item) {
+    public Box(String item) {
         this.item = item;
     }
 
@@ -25,27 +25,26 @@ public class Box {
         this.isOpened = isOpened;
     }
 
-    public void openBox() {
-        if (item != null) {
+    public void open() {
+        if (item == null) {
             System.out.println("Коробка открыта");
         }
     }
 
-    public void closeBox() {
-        if (item == null) {
+    public void close() {
+        if (item != null) {
             System.out.println("Коробка закрыта");
         }
     }
 
-    public void repaintBox() {
+    public void repaint() {
         Scanner input = new Scanner(System.in);
         System.out.print("Пожалуйста, введите цвет: ");
         color = input.nextLine();
         System.out.println("Цвет: " + color);
     }
 
-    public void printInfoDox(){
+    public void printInfo(){
         System.out.print("Width: " + width + ", Height: " + height + ", Depth: " + depth + ", Color: " + color);
     }
-
 }
