@@ -95,8 +95,10 @@ public class App07 {
                 if (arr.length < 2) {
                     return -1;
                 }
-                for (int j = 0; j < arr[i].length; j++) {
-                    sum += arr[i][j];
+                else {
+                    for (int j = 0; j < arr[i].length; j++) {
+                        sum += arr[i][j];
+                    }
                 }
             }
         return sum;
