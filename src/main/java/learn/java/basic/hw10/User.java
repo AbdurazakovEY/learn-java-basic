@@ -1,13 +1,17 @@
 package learn.java.basic.hw10;
 
+import static java.lang.System.*;
+
 public class User {
-    private String lastName;
+    private final String lastName;
     private String firstName;
     private String middleName;
-    private int age;
+    private int yearOfBirth;
     private String emailAddress;
 
-    //public User () {}
+    /**
+     * public User () {}
+     */
     public User (String lastNameParam) {
         this.lastName = lastNameParam;
     }
@@ -27,14 +31,14 @@ public class User {
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
-        this.age = age;
+        this.yearOfBirth = age;
     }
 
     public User (String lastName, String firstName, String middleName, int ageParam, String emailAddress) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
-        this.age = ageParam;
+        this.yearOfBirth = ageParam;
         this.emailAddress = emailAddress;
     }
 
@@ -51,7 +55,7 @@ public class User {
     }
 
     public int getAge() {
-        return age;
+        return yearOfBirth;
     }
 
     public String getEmailAddress() {
@@ -59,9 +63,9 @@ public class User {
     }
 
     public void info() {
-        if (this.age >= 40) {
-            System.out.println("Name: " + this.lastName + " " + this.firstName + " " + this.middleName + "\nYear of Birth: " + this.age + "\nEmail Address: " + this.emailAddress);
-            System.out.println();
+        if (this.yearOfBirth >= 40) {
+            out.println("Name: " + this.lastName + " " + this.firstName + " " + this.middleName + "\nYear of Birth: " + this.yearOfBirth + "\nEmail Address: " + this.emailAddress);
+            out.println();
         }
     }
 
